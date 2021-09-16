@@ -33,8 +33,9 @@ struct FruitCardView: View {
                     .padding(.horizontal, 16)
                     .frame(maxWidth: 480)
                 // BUTTON: START
-            } // VSTACK:
-        } // ZSTACK:
+                StartButtonView()
+            } //: VSTACK
+        } //: ZSTACK:
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
         .background(LinearGradient(gradient: Gradient(colors: [Color("ColorBlueberryLight"), Color("ColorBlueberryDark")]), startPoint: .top, endPoint: .bottom))
         .cornerRadius(20)
