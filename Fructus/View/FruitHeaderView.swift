@@ -9,14 +9,16 @@ import SwiftUI
 
 struct FruitHeaderView: View {
     // MARK: - PROPERTIES
+
     var fruit: Fruit
     @State private var isAnimatingImage = false
-    
+
     // MARK: - BODY
+
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: fruit.gradientColors), startPoint: .topLeading, endPoint: .bottomTrailing)
-            
+
             Image(fruit.image)
                 .resizable()
                 .scaledToFit()
@@ -25,7 +27,7 @@ struct FruitHeaderView: View {
                 .scaleEffect(isAnimatingImage ? 1.0 : 0.6)
         } //: ZSTACK
         .frame(height: 440)
-        .onAppear() {
+        .onAppear {
             withAnimation(.easeOut(duration: 0.5)) {
                 isAnimatingImage = true
             }
@@ -33,7 +35,8 @@ struct FruitHeaderView: View {
     }
 }
 
-    // MARK: - PREVIEW
+// MARK: - PREVIEW
+
 struct FruitHeaderView_Previews: PreviewProvider {
     static var previews: some View {
         FruitHeaderView(fruit: fruitsData[0])
