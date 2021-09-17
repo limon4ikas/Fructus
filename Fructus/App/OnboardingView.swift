@@ -9,7 +9,7 @@ import SwiftUI
 
 struct OnboardingView: View {
     // MARK: - PROPERTIES
-    var fruits: [Fruit] = fruitData
+    var fruits: [Fruit] = fruitsData
 
     // MARK: - BODY
 
@@ -28,6 +28,6 @@ struct OnboardingView: View {
 
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView(fruits: fruitData)
+        OnboardingView(fruits: fruitsData)
     }
 }
